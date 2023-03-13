@@ -13,13 +13,13 @@ Fonte kan hentes fra:
 [Material Design Icons](https://pictogrammers.com/library/mdi/)
 
 
-Kopiér den nye font til Resources | Fonts. 
+Kopiér den nye font til `Resources | Fonts`. 
 
 Registrér den nye font, her er valgt følgende:
 
-- En Google Font RobotoSerif-Black.ttf med alias "Roboto"
-- En FontAwesome: fa-solid-900.ttf med alias "FA-solid"
-- En Google Material Icon Font: MaterialIcons-Regular med alias "MaterialRegular"
+- En Google Font: *RobotoSerif-Black.ttf* med alias "Roboto"
+- En FontAwesome: *fa-solid-900.ttf* med alias "FA-solid"
+- En Google Material Icon Font: *MaterialIcons-Regular* med alias "MaterialRegular"
 
 ```csharp
 builder
@@ -49,10 +49,10 @@ Det eneste man skal gøre er at sætte FontFamily til den ønskede font:
 &nbsp;
 ### Icon Font
 Udfordringen er at finde den korrekte kode for et ikon. Her benyttes værktøjet: [IconFont2Code](https://andreinitescu.github.io/IconFont2Code/).
-I følgende eksempler benyttes **MaterialIcons-Regular.ttf**, men fremgangsmåden er ens for andre Icon-fonte:
+I følgende eksempler benyttes *MaterialIcons-Regular.ttf* med et alias *MaterialRegular*, men fremgangsmåden er ens for andre Icon-fonte:
 
-Når man åbner font-filen vha. værktøjet, kan man finde UniCode. Her vælges ikonet for **Person**, som har koden: `\ue7fd`. 
-Den skal imidlertid escapes for at kunne benyttes af XAML og kommer til at hedde: `&#xe7fd;`
+Når man åbner font-filen vha. værktøjet, kan man fremsøge icon med tilhørende UniCode. Her vælges ikonet for **Person**, som har Unicode koden: `\ue7fd`. 
+Koden skal imidlertid escapes for at kunne benyttes af XAML og kommer til at hedde: `&#xe7fd;`, se [rfc5137 section 5.2. XML and HTML](https://datatracker.ietf.org/doc/html/rfc5137#section-5.2).
 
 ```xml
 <Label
@@ -78,7 +78,7 @@ sætte ind i f.eks. en ny fil kaldet *Icons.xam*l. Her er valgt 3 ikoner, hvilket
 </ResourceDictionary>
 ```
 
-Filen sættes ind i folderen Styles | Icons.xaml og merges sammen med de andre ResourceDictionaries i App.xaml:
+Filen sættes ind i folderen `Styles | Icons.xaml` og merges sammen med de andre ResourceDictionaries i `App.xaml`:
 
 ```xml
 <?xml version = "1.0" encoding = "UTF-8" ?>
